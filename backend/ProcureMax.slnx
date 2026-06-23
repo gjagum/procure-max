@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ProcureMax.Api.Tests/ProcureMax.Api.Tests.csproj" />
+  <Project Path="ProcureMax.Api/ProcureMax.Api.csproj" />
+</Solution>
