@@ -35,7 +35,7 @@ public class PurchaseRequisitionTests
         var act = () => new PurchaseRequisition(requestorId!);
 
         act.Should().Throw<ArgumentException>()
-            .WithParameterName(nameof(PurchaseRequisition.RequestorId));
+            .WithParameterName(nameof(requestorId));
     }
 
     [Fact]

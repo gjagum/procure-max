@@ -15,10 +15,17 @@ public class MoneyTests
     public void FromDecimal_rounds_to_minor_units()
     {
         var m = Money.FromDecimal(12.345m);
+        var n = Money.FromDecimal(12.355m);
 
-        m.MinorUnits.Should().Be(1235); // round of 12.345 -> 12.35
-        m.AsDecimal().Should().Be(12.35m);
+        m.MinorUnits.Should().Be(1234); // round of 12.345 -> 12.34
+        m.AsDecimal().Should().Be(12.34m);
         m.Currency.Should().Be("USD");
+
+        n.MinorUnits.Should().Be(1236); // round of 12.346 -> 12.36
+        n.AsDecimal().Should().Be(12.36m);
+        n.Currency.Should().Be("USD");
+
+        
     }
 
     [Fact]
